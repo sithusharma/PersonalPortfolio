@@ -13,7 +13,10 @@
   .about, .skills {
     animation: fadeIn 1s ease-out;
   }
-  
+
+p{
+  color: white;
+}
 
 .home {
     width: 100%;

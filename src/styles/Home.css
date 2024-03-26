@@ -18,11 +18,15 @@ p{
   color: white;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 .home {
     width: 100%;
     align-items: center;
     font-family: "Arial", sans-serif;
-    color: #3e497a;
   }
   
   .about {
@@ -50,6 +54,12 @@ p{
   }
   .prompt svg {
     font-size: 60px;
+    margin: 5px;
+    color: white;
+  }
+
+  .writingLinks{
+    font-size: 30px;
     margin: 5px;
     color: white;
   }

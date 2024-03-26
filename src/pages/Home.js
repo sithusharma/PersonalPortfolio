@@ -16,10 +16,8 @@ function Home() {
                 <a href="https://www.linkedin.com/in/sithu-sharma/"><LinkedInIcon/></a>
                 < a href="mailto:sithusharma@vt.edu"><EmailIcon/></a>
                 < a href="https://github.com/sithusharma"><GithubIcon/></a>
-                <a href ="https://olive-joanie-70.tiiny.site"><p>Resume</p></a>
-                <a href ="https://olive-joanie-70.tiiny.site"><p>Blog</p></a>
-                <a href ="https://olive-joanie-70.tiiny.site"><p>Video</p></a>
             </div>
+
         </div>
         <div className="skills">
             <h1>Skills</h1>

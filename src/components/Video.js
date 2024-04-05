@@ -5,9 +5,10 @@ function Video() {
         <div>
 
         <div>
-        <iframe src="https://youtube.com" style={{width: '100%', height: '500px'}}></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/isdLel273rQ?si=vOgQfkdO9oCjgNlH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <span>Link is currently down. Once the project is finished the embedded project link will be updated</span>
+        <span>My favorite youtube channel explaining something mind blowing.</span>
+          
         </div>
       );
     }

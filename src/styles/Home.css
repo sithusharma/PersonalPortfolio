@@ -88,6 +88,14 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 80px;
   color: #fdfdfd;
+  text-align: center;
+  /* Added text alignment for centering */
+}
+
+.skills h2 {
+  color: #3e497a;
+  text-align: center;
+  /* Added text alignment for centering */
 }
 
 .about .prompt {

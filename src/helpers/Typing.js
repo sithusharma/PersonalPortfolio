@@ -1,5 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import '../styles/Typing.css'; // Import the CSS file
 
 const Typing = () => {
   return (
@@ -10,14 +11,9 @@ const Typing = () => {
       ]}
       wrapper="span"
       cursor={true}
-      speed={6}           // Slower typing speed (default is 40)
+      speed={6}            // Slower typing speed
       repeat={0}           // Type only once
-      style={{
-        fontSize: '10em',
-        fontWeight: '200',
-        display: 'inline-block',
-        color: '#ffffff',
-      }}
+      className="typing-text" // Apply the CSS class for responsiveness
     />
   );
 };

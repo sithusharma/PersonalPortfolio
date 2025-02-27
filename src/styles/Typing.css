@@ -1,0 +1,28 @@
+.typing-text {
+    font-size: 10em; /* Default font size for large screens */
+    font-weight: 200;
+    display: inline-block;
+    color: #ffffff;
+  }
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .typing-text {
+      font-size: 6rem; /* Reduce font size for tablets */
+    }
+  }
+  
+  /* Small tablets and large phones */
+  @media (max-width: 768px) {
+    .typing-text {
+      font-size: 4rem; /* Reduce font size for smaller screens */
+    }
+  }
+  
+  /* Mobile Phones */
+  @media (max-width: 480px) {
+    .typing-text {
+      font-size: 3rem; /* Reduce font size for mobile devices */
+    }
+  }
+  

@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
-import ReorderIcon from '@material-ui/icons/Reorder';
+import { FiMenu, FiX } from "react-icons/fi"; // Modern icons
 
-function Navbar({ isTransparent }) {
+function Navbar() {
     const [expandNavbar, setExpandNavbar] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
-        setExpandNavbar(false);
+        setExpandNavbar(false); // Collapse navbar on route change
     }, [location]);
 
-    // Helper function to check the active route
     const isActive = (path) => location.pathname === path ? "active-link" : "";
 
     return (
         <div className="navbar" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">
                 <button onClick={() => setExpandNavbar((prev) => !prev)}>
-                    <ReorderIcon />
+                    {expandNavbar ? <FiX size={28} /> : <FiMenu size={28} />}
                 </button>
             </div>
             <div className="links">

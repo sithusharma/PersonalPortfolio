@@ -31,13 +31,20 @@
 
 /* Added a transparent bordered container */
 .about-container {
-  background-color: rgba(124, 124, 124, 0.5); /* Adjust the last value (0.5) for transparency */
+  background-color: rgba(124, 124, 124, 0.5); /* Adjust transparency */
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   padding: 40px;
   max-width: 900px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   animation: fadeInUp 0.8s ease-out;
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Animation */
+.about-container:hover {
+  transform: scale(1.02); /* Slight zoom-in effect */
+  border-color: rgba(255, 255, 255, 0.4); /* Brightens border */
 }
 
 

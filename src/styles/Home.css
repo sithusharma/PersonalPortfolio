@@ -34,7 +34,7 @@ body {
 
 /* Typing Effect */
 .typing {
-  font-size: 8em;
+  font-size: 8rem; /* Default for large screens */
   font-weight: 300;
   color: #ffffff;
   overflow: hidden;
@@ -78,4 +78,35 @@ body {
 
 .socialMedia a:hover {
   transform: scale(1.2);
+}
+
+/* ✅ Responsive Typography */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .typing {
+    font-size: 5rem; /* Adjust title for tablets */
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .typing {
+    font-size: 3.5rem; /* Reduce further for smaller devices */
+  }
+
+  .prompt h3 {
+    font-size: 16px; /* Reduce subtitle text size */
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .typing {
+    font-size: 2.5rem; /* Further reduce title size */
+  }
+
+  .prompt h3 {
+    font-size: 14px;
+  }
 }

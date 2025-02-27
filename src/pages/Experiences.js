@@ -9,15 +9,21 @@ const experienceData = [
 
 function ExperienceItem({ data }) {
   return (
-    <div className="experience-item">
+    <a 
+      href="https://www.linkedin.com/in/sithu-sharma/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="experience-item"
+    >
       <div className="experience-item-content">
         <span className="experience-tag">{data.year}</span>
         <h3>{data.title}</h3>
         <p>{data.content}</p>
       </div>
-    </div>
+    </a>
   );
 }
+
 
 function Experiences() {
   return (

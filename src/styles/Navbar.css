@@ -1,88 +1,145 @@
+/* Navbar Container */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 .navbar {
-    width: 100%;
-    height: 100px;
-    background: #21325e;
-  }
-  
-  .links {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-  }
-  
+  width: 100%;
+  height: 100px;
+  /*background-image: url('../assets/navback.png'); /* Replace with your image path */
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif; /* Changed to slim Poppins font */
+}
+
+
+/* Default Navbar Link */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative; /* Required for the underline */
+  padding-bottom: 5px; /* Space for the underline */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  color: #999;
+}
+
+/* Active Link with Bottom Bar */
+.active-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Thickness of the bar */
+  background-color: white; /* Color of the bar */
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Optional: Animate the underline on hover */
+.navbar a:hover::after {
+  width: 100%;
+}
+
+
+/* Navbar Links */
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 20px; /* Reduced font size for a sleeker look */
+  font-weight: 300; /* Thinner font weight */
+  letter-spacing: 1px; /* Slight letter spacing for elegance */
+  transition: color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.navbar a:hover {
+  color: #999; /* Subtle hover effect */
+}
+
+/* Toggle Button for Mobile */
+.toggleButton {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.toggleButton svg {
+  font-size: 40px; /* Slimmer button icon */
+}
+
+/* Mobile Menu Open */
+#open {
+  height: 100vh;
+}
+
+#open .links {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+#open a {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 900px) {
   .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 25px;
+    width: auto;
   }
-  
+}
+
+@media only screen and (max-width: 600px) {
   .toggleButton {
-    width: 100%;
-    height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
   }
-  
-  .toggleButton svg {
-    font-size: 50px;
+
+  #close a {
+    display: none;
   }
-  .toggleButton button {
-    margin-right: 20px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .toggleButton {
+    display: none;
   }
-  
+
+  .hiddenLinks {
+    display: none;
+  }
+
   #open {
-    height: 100vh;
+    height: 100px;
   }
-  
+
   #open .links {
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 100px;
+    flex-direction: row;
   }
-  
-  #open a {
-    width: 100%;
-    text-align: center;
-  }
-  
-  @media only screen and (max-width: 900px) {
-    .navbar a {
-      width: 70px;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .toggleButton {
-      display: flex;
-    }
-    #close a {
-      display: none;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .toggleButton {
-      display: none;
-    }
-  
-    .hiddenLinks {
-      display: none;
-    }
-  
-    #open {
-      height: 100px;
-    }
-  
-    #open .links {
-      flex-direction: row;
-    }
-  }
+}

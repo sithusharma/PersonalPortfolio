@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../assets/resume.jpeg'
+import resume from '../assets/kshitij-sharma-resume.jpg'
 
 function Resume() {
     return (

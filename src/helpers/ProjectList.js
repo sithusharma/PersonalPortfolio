@@ -5,42 +5,32 @@ import plane from '../assets/plane.jpeg'
 import web from '../assets/web.jpeg'
 import weather from '../assets/weather.jpeg'
 import find from '../assets/find.jpg'
+import bot from '../assets/chatbot.jpeg'
+import song from '../assets/song.jpeg'
 
 export const ProjectList = [
     {
-        name: "Weather Application",
-        image: weather,
-        skills: "React.JS, HTML, CSS, OpenWeatherAPI",
-        url: "https://github.com/sithusharma/WeatherApplication",
-    },
-    {
         name: "Emotion Recognition Engine",
         image: emotion,
-        skills: "TensorFlow, Flask, Kaggle, Keras, Python, OpenCV",
+        skills: "An emotion classification engine for real-time facial expression detection.",
         url: "https://github.com/sithusharma/EmotionClassify",
     },
     {
         name: "Roomate Finder Application",
         image: find,
-        skills: "React.JS, Node.JS, HTML/CSS, SpringBoot, Java EE, MySQL, Docker, Google Maps API",
+        skills: "A personality based roommate matching application for college students",
         url: "https://github.com/czarthak/roommate-finder",
     },
     {
-        name: "Airline Managment System",
-        image: plane,
-        skills: "Java EE, PostgreSQL",
-        url: "https://github.com/sithusharma/AirlineManagment",
+        name: "Employee ChatBot ",
+        image: bot,
+        skills: "A virtual assistant to analyze  employee documents and answers questions based on queries",
+        url: "https://github.com/sithusharma/",
     },
     {
-        name: "Movie Review Website",
-        image: movie,
-        skills: "React.JS, SpringBoot, Java EE, MongoDB",
-        url: "https://github.com/sithusharma/MovieReview",
-    },
-    {
-        name: "Website for Skin Care Buisness",
-        image: web,
-        skills: "TO BE COMPLETED",
-        url: "",
+        name: "Advanced Song Retrieval Application",
+        image: song,
+        skills: "A music search platform that returns the most suitable song choices based on user queries.",
+        url: "https://github.com/sithusharma/",
     },
 ];

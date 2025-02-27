@@ -6,10 +6,8 @@ import Experiences from './pages/Experiences'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProjectDisplay from "./pages/ProjectDisplay";
-import Resume from './components/Resume';
-import Blog from './components/Blog';
-import Video from './components/Video';
-import Podcast from './components/Podcast';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -18,15 +16,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectDisplay />} />
           <Route path="/experiences" element={<Experiences />} />
-          <Route path="/video" element={<Video />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/podcast" element={<Podcast />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

@@ -1,46 +1,35 @@
 import React from 'react';
-import '../styles/Experiences.css'; // Assume this CSS file adds styling for the timeline
+import "../styles/Experiences.css"; 
 
-// Updated timeline data structure with title and content
-const timelineData = [
-  { year: 2021, title: 'Competitive Robotics', content: 'Assisted with mechanical and automation development' },
-  { year: 2022, title: 'Introduction to Java', content: 'Began development with OOP Principles. Developed Tic-Tac-Toe Application.' },
-  { year: 2023, title: 'Introduction to Python and More', content: 'Began development in Python, SQL, and JavaScript and learned the basics of Full Stack Development' },
-  { year: 2023, title: 'First Internship', content: 'Began first internship as a Market Researcher and Data Analyst' },
-  { year: 2024, title: 'Further Education', content: 'Completed first Full Stack Application utilizing three tier system (Front End, Back End, DB)' },
-  // Add more events as needed
+const experienceData = [
+  { year: 2023, title: 'Data Analyst Intern', content: 'Utilized data analytics to evaluate market expansion opportunities, applying tools such as Excel, Tableau, and SQL.' },
+  { year: 2024, title: 'Software Engineering Intern', content: 'Developed cross-functional document management services for diverse clients as part of a development team.' },
+  { year: 2025, title: 'Student Researcher', content: 'Helping to develop and fix an AI-powered reading platform, enhancing parent-child engagement using conversational AI.' },
 ];
 
-function TimelineItem({ data }) {
+function ExperienceItem({ data }) {
   return (
-    <div className="timeline-item">
-      <div className="timeline-item-content">
-        <span className="tag" style={{ background: '#4a7ba7' }}> {/* Updated color */}
-          {data.year}
-        </span>
-        <h3>{data.title}</h3> {/* Added title */}
+    <div className="experience-item">
+      <div className="experience-item-content">
+        <span className="experience-tag">{data.year}</span>
+        <h3>{data.title}</h3>
         <p>{data.content}</p>
-        <span className="circle"></span>
       </div>
     </div>
   );
 }
 
-function Timeline() {
+function Experiences() {
   return (
-    <div className="timeline-container">
-      {timelineData.map((item, idx) => (
-        <TimelineItem data={item} key={idx} />
-      ))}
+    <div>
+      <h2 className="title">My Developer Journey</h2>
+      <div className="experience-container">
+        {experienceData.map((item, idx) => (
+          <ExperienceItem data={item} key={idx} />
+        ))}
+      </div>
     </div>
   );
 }
 
-export default function Experiences() {
-  return (
-    <div>
-      <h2>My Developer Journey</h2>
-      <Timeline />
-    </div>
-  );
-}
+export default Experiences;

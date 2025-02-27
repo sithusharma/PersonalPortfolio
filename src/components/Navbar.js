@@ -1,38 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import ReorderIcon from '@material-ui/icons/Reorder';
-import { useEffect, useState } from "react";
 
-function Navbar() {
+function Navbar({ isTransparent }) {
     const [expandNavbar, setExpandNavbar] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
         setExpandNavbar(false);
     }, [location]);
+
+    // Helper function to check the active route
+    const isActive = (path) => location.pathname === path ? "active-link" : "";
+
     return (
         <div className="navbar" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">
-                <button
-                    onClick={() => {
-                        setExpandNavbar((prev) => !prev);
-                    }}>
+                <button onClick={() => setExpandNavbar((prev) => !prev)}>
                     <ReorderIcon />
                 </button>
-
             </div>
             <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/experiences">Experiences</Link>
-                <Link to="/resume">Resume</Link>
-                <Link to="/podcast">Podcast</Link>
-                <Link to="/video">Video Project</Link>
-                <Link to="/blog">Blog</Link>
+                <Link to="/" className={isActive("/")}>Home</Link>
+                <Link to="/about" className={isActive("/about")}>About</Link>
+                <Link to="/projects" className={isActive("/projects")}>Projects</Link>
+                <Link to="/experiences" className={isActive("/experiences")}>Experiences</Link>
+                <Link to="/contact" className={isActive("/contact")}>Contact</Link>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;

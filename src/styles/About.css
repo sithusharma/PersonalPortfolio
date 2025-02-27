@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  font-weight: bold;
+  max-width: 900px;
+  margin: auto;
+  min-height: 79vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Added a transparent bordered container */
+.about-container {
+  background-color: rgba(124, 124, 124, 0.5); /* Adjust the last value (0.5) for transparency */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+
+.about-section h2 {
+  margin-top: -40px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9); /* Slightly softer white */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adds depth */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Arrange image to the left and text to the right */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Image Styling */
+.about-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Hover effect */
+.about-image img:hover {
+  filter: brightness(0.9) contrast(1.2);
+  transform: scale(1.03);
+}
+
+/* About text */
+.about-text {
+  max-width: 500px;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  animation: fadeInUp 1s ease-out;
+  color: rgba(255, 255, 255, 0.85); /* Lighter white for contrast */
+  font-weight: 300; /* Make text thinner */
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow for readability */
+  margin-top: -50px;
+}
+
+/* Bio Styling */
+.bio {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85); /* Lighter white */
+  font-weight: 300; /* Light font weight */
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); /* Enhances readability */
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.social-icons a {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+}

@@ -23,7 +23,7 @@ function Navbar() {
             <div className="links">
                 <Link to="/" className={isActive("/")}>Home</Link>
                 <Link to="/about" className={isActive("/about")}>About</Link>
-                <Link to="/skills" className={isActive("/")}>Skills</Link>
+                <Link to="/skills" className={isActive("/skills")}>Skills</Link>
                 <Link to="/projects" className={isActive("/projects")}>Projects</Link>
                 <Link to="/experiences" className={isActive("/experiences")}>Experiences</Link>
                 <Link to="/contact" className={isActive("/contact")}>Contact</Link>

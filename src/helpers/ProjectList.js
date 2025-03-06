@@ -25,7 +25,7 @@ export const ProjectList = [
         name: "Employee ChatBot ",
         image: bot,
         skills: "A virtual assistant to analyze  employee documents and answers questions based on queries",
-        url: "https://github.com/sithusharma/",
+        url: "https://chatbot-tn7i4fo8guhxz29aazflim.streamlit.app/",
     },
     {
         name: "Advanced Song Retrieval Application",

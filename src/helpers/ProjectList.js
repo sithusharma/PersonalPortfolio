@@ -31,6 +31,6 @@ export const ProjectList = [
         name: "Advanced Song Retrieval Application",
         image: song,
         skills: "A music search platform that returns the most suitable song choices based on user queries.",
-        url: "https://github.com/sithusharma/",
+        url: "https://github.com/sithusharma/semantic-search",
     },
 ];
